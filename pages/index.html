@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plat Planner Data</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1c2230; --muted: #5b6474; --accent: #1f7a4d; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #12161d; --fg: #e6e9ef; --muted: #9aa3b2; --accent: #4ade80; }
+  }
+  :root[data-theme="dark"] { --bg: #12161d; --fg: #e6e9ef; --muted: #9aa3b2; --accent: #4ade80; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+  main { max-width: 40rem; margin: 0 auto; padding: 40px 16px; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Plat Planner data</h1>
+  <p>The shared price list behind <strong>Plat Planner</strong>, a fan-made Overwolf app for Warframe.
+    One scheduled job collects warframe.market prices every few hours, so every install doesn't have to.</p>
+  <ul>
+    <li><a href="latest.json">latest.json</a>: when the current list was built</li>
+    <li><a href="privacy.html">Privacy policy</a></li>
+  </ul>
+  <p class="muted">Not affiliated with or endorsed by Digital Extremes. Prices come from
+    warframe.market and drop data from warframestat.us.</p>
+</main>
+</body>
+</html>

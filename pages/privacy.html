@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plat Planner Privacy</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1c2230; --muted: #5b6474; --line: #dfe3ea; --accent: #1f7a4d; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #12161d; --fg: #e6e9ef; --muted: #9aa3b2; --line: #2a303b; --accent: #4ade80; }
+  }
+  :root[data-theme="dark"] { --bg: #12161d; --fg: #e6e9ef; --muted: #9aa3b2; --line: #2a303b; --accent: #4ade80; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+  main { max-width: 44rem; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+  .muted { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th, td { text-align: left; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  code { font-size: .9em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Plat Planner privacy policy</h1>
+  <p class="muted">Last updated 30 October 2026. Plat Planner is a fan-made Overwolf app for Warframe,
+    not affiliated with or endorsed by Digital Extremes.</p>
+
+  <p><strong>In short:</strong> your inventory stays on your PC, encrypted. Plat Planner has no
+    accounts, no analytics and no tracking. It only contacts the services listed below, and it
+    never sends them anything about what you own.</p>
+
+  <h2>What Plat Planner reads</h2>
+  <p>While Warframe runs, Overwolf's game events give the app your inventory (item counts and
+    currency balances), your in-game name, and the item your cursor is over. The app never asks
+    for chat.</p>
+
+  <h2>What it keeps, and where</h2>
+  <ul>
+    <li><strong>Item counts, balances, order tracking and settings</strong> are saved on your PC
+      only, inside Overwolf's storage for this app. Your inventory and orders are encrypted with
+      Windows' per-user encryption, so other Windows users on the PC can't read them. If that
+      encryption isn't available, they aren't saved at all.</li>
+    <li><strong>Your in-game name and the game's raw inventory data</strong> are never saved.</li>
+    <li><strong>Market prices</strong> are cached on your PC. They're public data, not yours.</li>
+  </ul>
+  <p>Settings &gt; Your data &gt; <em>Delete my saved data</em> erases the saved inventory and orders.
+    Uninstalling the app removes everything it stored.</p>
+
+  <h2>What it sends, and to whom</h2>
+  <table>
+    <thead><tr><th>Where</th><th>What is sent</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td>api.warframe.market</td><td>The name of an item whose price is needed. Nothing about you.</td><td>Fetching prices</td></tr>
+      <tr><td>api.warframestat.us, drops.warframestat.us</td><td>Nothing; public item and drop tables are downloaded.</td><td>Weekly</td></tr>
+      <tr><td>kdenkc.github.io (this site)</td><td>Nothing; the shared price list is downloaded.</td><td>At start and every few hours</td></tr>
+      <tr><td>An order server you set yourself</td><td>The item and quantity of an order you click to send. Only addresses on your PC or home network are accepted.</td><td>Only if you set one up</td></tr>
+      <tr><td>Discord (the developer's channel)</td><td>A problem report, shown to you in full first: app version, error messages and connection status. No name, items or balances.</td><td>Only when you click Send</td></tr>
+    </tbody>
+  </table>
+  <p>Like any website, these services see your IP address when the app connects to them.</p>
+
+  <h2>Ads</h2>
+  <p>Plat Planner shows ads in its desktop window (never in the in-game overlay), served by
+    Overwolf's ad platform under <a href="https://www.overwolf.com/legal/privacy/">Overwolf's privacy
+    policy</a>. Overwolf's ad library may use your Overwolf profile and app information for ad
+    targeting, which is why the app asks for Overwolf's Profile, Extensions and Streaming permissions.
+    Plat Planner itself doesn't pass your inventory or anything else to the ad platform.</p>
+
+  <h2>Children</h2>
+  <p>Plat Planner doesn't knowingly collect information from anyone, of any age.</p>
+
+  <h2>Changes and contact</h2>
+  <p>Changes to this policy are published on this page with a new date. For questions, open an issue
+    at <a href="https://github.com/KDenKC/plat-planner-data/issues">github.com/KDenKC/plat-planner-data</a>.</p>
+</main>
+</body>
+</html>
